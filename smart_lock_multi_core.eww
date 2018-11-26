@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\smart_lock_cm33_core0\smart_lock_cm33_core0.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\smart_lock_cm33_core1\smart_lock_cm33_core1.ewp</path>
+    </project>
+    <batchBuild>
+        <batchDefinition>
+            <name>all</name>
+            <member>
+                <project>smart_lock_cm33_core0</project>
+                <configuration>debug</configuration>
+            </member>
+            <member>
+                <project>smart_lock_cm33_core0</project>
+                <configuration>release</configuration>
+            </member>
+        </batchDefinition>
+        <batchDefinition>
+            <name>debug</name>
+            <member>
+                <project>smart_lock_cm33_core0</project>
+                <configuration>debug</configuration>
+            </member>
+        </batchDefinition>
+        <batchDefinition>
+            <name>release</name>
+            <member>
+                <project>smart_lock_cm33_core0</project>
+                <configuration>release</configuration>
+            </member>
+        </batchDefinition>
+    </batchBuild>
+</workspace>

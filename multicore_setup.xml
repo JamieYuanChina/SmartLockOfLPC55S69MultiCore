@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sessionSetup><partner><name>Master</name><workspace>$WS_PATH$</workspace><project>$PROJ_PATH$</project><config>debug</config><numberOfCores>1</numberOfCores><port>53461</port></partner><partner><name>Slave</name><workspace>$PROJ_DIR$/../smart_lock_cm33_core1/smart_lock_cm33_core1.eww</workspace><project>smart_lock_cm33_core1</project><config>debug</config><numberOfCores>1</numberOfCores><port>53461</port><attachToRunningTarget>false</attachToRunningTarget></partner></sessionSetup>

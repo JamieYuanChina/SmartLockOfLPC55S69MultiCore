@@ -18,7 +18,6 @@
 
 # Libraries
 *.lib
-*.a
 *.la
 *.lo
 
@@ -41,6 +40,13 @@
 *.su
 *.idb
 *.pdb
+/settings
+/smart_lock_cm33_core0/debug
+/smart_lock_cm33_core0/release
+/smart_lock_cm33_core0/settings
+/smart_lock_cm33_core1/debug
+/smart_lock_cm33_core1/release
+/smart_lock_cm33_core1/settings
 
 # Kernel Module Compile Results
 *.mod*

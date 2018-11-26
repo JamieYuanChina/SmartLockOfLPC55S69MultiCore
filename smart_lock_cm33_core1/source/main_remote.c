@@ -23,6 +23,7 @@
 #define LOCAL_EPT_ADDR (30)
 #define APP_RPMSG_READY_EVENT_DATA (1)
 #define APP_RPMSG_EP_READY_EVENT_DATA (2)
+   
 #define APP_BOARD_RED_LED_PORT 1U
 #define APP_BOARD_RED_LED_PIN 6U
 
@@ -99,11 +100,13 @@ int main(void)
     
     /* Initialize standard SDK demo application pins */
     BOARD_InitPins_Core1();
+    
     GPIO_PortInit(GPIO, APP_BOARD_RED_LED_PORT);
     GPIO_PinInit(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, &red_led_config);
     GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 1);
     GPIO_PortMaskedSet(GPIO, APP_BOARD_RED_LED_PORT, 0x0000FFFF);
     GPIO_PortMaskedWrite(GPIO, APP_BOARD_RED_LED_PORT, 0xFFFFFFFF);
+    
 #ifdef MCMGR_USED
     uint32_t startupData;
     mcmgr_status_t status;
@@ -143,22 +146,22 @@ int main(void)
 
     while (1)//(msg.DATA <= 100)
     {
-       if (has_received)  //如果接收到数据，进行处理
+       if (has_received)       // if recevied a message from core 0
         {
-            has_received = 0;  //标志位清零
-            if(msg.DATA==1)  // 如果接收到1，则熄灭LED
+            has_received = 0;  // clear recevied flag
+            if(msg.DATA==1)    // if the message is 1,then turn off the led 
             {
                   GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 1);
             }
-            else if(msg.DATA==2) //如果接收到2，点亮LED
+            else if(msg.DATA==2) // if the message is 2,then turn on the led 
             {
                   GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 0);
-            }else if(msg.DATA==254)  //如果接收到254
+            }else if(msg.DATA==254)  // if the message is 254,then break this "while" to next "while" 
             {
-              break;   //退出循环
+              break;                 // It's just used to test whether the communication between the two cores is normal.
             }else 
             {
-              continue;  //跳过本次循环
+              continue;  
             }
             //msg.DATA++;
             rpmsg_lite_send(my_rpmsg, my_ept, remote_addr, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);

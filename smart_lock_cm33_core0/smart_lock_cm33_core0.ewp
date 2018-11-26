@@ -2603,7 +2603,16 @@
     <group>
         <name>source</name>
         <file>
+            <name>$PROJ_DIR$\source\Common.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\source\main_master.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\MqttKit.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\MqttKit.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\source\rpmsg_config.h</name>

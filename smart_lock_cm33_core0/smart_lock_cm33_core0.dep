@@ -5,114 +5,173 @@
     <configuration>
         <name>debug</name>
         <outputs>
-            <file>$PROJ_DIR$\board\board.c</file>
-            <file>$PROJ_DIR$\board\clock_config.c</file>
-            <file>$PROJ_DIR$\board\pin_mux.c</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_power.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcomm.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\generic_list.o</file>
-            <file>$PROJ_DIR$\debug\obj\board.o</file>
-            <file>$PROJ_DIR$\debug\obj\pin_mux.o</file>
-            <file>$PROJ_DIR$\debug\obj\system_LPC55S69_cm33_core0.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\generic_list.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_str.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\smart_lock_cm33_core0.pbd</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_env_bm.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_reset.o</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_lite.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_ns.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\mcmgr.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\mcmgr_internal_core_api_lpc55s69.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_clock.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_platform.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_common.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.pbi</file>
-            <file>$PROJ_DIR$\debug\smart_lock_cm33_core0.out</file>
-            <file>$PROJ_DIR$\debug\obj\llist.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\main_master.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_reset.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\virtqueue.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_usart.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_gpio.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_assert.pbi</file>
-            <file>$PROJ_DIR$\component\lists\generic_list.c</file>
-            <file>$PROJ_DIR$\component\serial_manager\serial_manager.c</file>
-            <file>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</file>
-            <file>$PROJ_DIR$\component\uart\usart_adapter.c</file>
-            <file>$PROJ_DIR$\device\system_LPC55S69_cm33_core0.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_flexcomm.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_power.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_reset.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_usart.c</file>
-            <file>$PROJ_DIR$\mcmgr\mcmgr.c</file>
-            <file>$PROJ_DIR$\mcmgr\mcmgr_internal_core_api_lpc55s69.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\env\bm\rpmsg_env_bm.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\porting\rpmsg_platform.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\llist.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_lite.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_ns.c</file>
-            <file>$PROJ_DIR$\rpmsg_lite\virtqueue.c</file>
-            <file>$PROJ_DIR$\source\main_master.c</file>
-            <file>$PROJ_DIR$\startup\startup_LPC55S69_cm33_core0.s</file>
-            <file>$PROJ_DIR$\utilities\fsl_assert.c</file>
-            <file>$PROJ_DIR$\utilities\fsl_debug_console.c</file>
-            <file>$PROJ_DIR$\utilities\fsl_str.c</file>
-            <file>$PROJ_DIR$\debug\obj\serial_manager.o</file>
-            <file>$PROJ_DIR$\debug\obj\clock_config.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\main_master.o</file>
-            <file>$PROJ_DIR$\debug\obj\serial_port_uart.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\serial_port_uart.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_clock.o</file>
-            <file>$PROJ_DIR$\debug\obj\clock_config.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.o</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_ns.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_gpio.o</file>
-            <file>$PROJ_DIR$\debug\obj\board.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\virtqueue.o</file>
-            <file>$PROJ_DIR$\debug\obj\mcmgr.o</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_platform.o</file>
-            <file>$PROJ_DIR$\debug\obj\mcmgr_internal_core_api_lpc55s69.o</file>
-            <file>$PROJ_DIR$\debug\obj\usart_adapter.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_common.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_usart.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_str.o</file>
-            <file>$PROJ_DIR$\debug\obj\startup_LPC55S69_cm33_core0.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_assert.o</file>
-            <file>$PROJ_DIR$\debug\obj\rpmsg_lite.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
             <file>$PROJ_DIR$\debug\obj\fsl_flexcomm.o</file>
-            <file>$PROJ_DIR$\debug\obj\serial_manager.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_power.o</file>
+            <file>$PROJ_DIR$\debug\obj\mcmgr_internal_core_api_lpc55s69.o</file>
             <file>$PROJ_DIR$\debug\obj\usart_adapter.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\llist.o</file>
+            <file>$PROJ_DIR$\debug\obj\clock_config.o</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_lite.o</file>
+            <file>$PROJ_DIR$\debug\obj\serial_manager.pbi</file>
             <file>$PROJ_DIR$\debug\obj\system_LPC55S69_cm33_core0.o</file>
             <file>$PROJ_DIR$\debug\obj\rpmsg_env_bm.o</file>
             <file>$PROJ_DIR$\debug\obj\pin_mux.pbi</file>
-            <file>$PROJ_DIR$\source\MqttKit.c</file>
+            <file>$PROJ_DIR$\debug\obj\virtqueue.o</file>
+            <file>$PROJ_DIR$\debug\obj\usart_adapter.o</file>
             <file>$PROJ_DIR$\debug\obj\MqttKit.pbi</file>
             <file>$PROJ_DIR$\debug\obj\MqttKit.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_gpio.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\debug\obj\llist.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_usart.o</file>
+            <file>$PROJ_DIR$\debug\obj\startup_LPC55S69_cm33_core0.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_str.o</file>
+            <file>$PROJ_DIR$\debug\obj\board.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_ns.o</file>
+            <file>$PROJ_DIR$\debug\obj\serial_port_uart.o</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_platform.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_clock.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_assert.o</file>
+            <file>$PROJ_DIR$\debug\obj\mcmgr.o</file>
+            <file>$PROJ_DIR$\board\clock_config.c</file>
+            <file>$PROJ_DIR$\CMSIS\core_cm33.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\board\pin_mux.c</file>
+            <file>$PROJ_DIR$\board\board.h</file>
+            <file>$PROJ_DIR$\board\clock_config.h</file>
+            <file>$PROJ_DIR$\board\pin_mux.h</file>
+            <file>$PROJ_DIR$\board\board.c</file>
+            <file>$PROJ_DIR$\CMSIS\mpu_armv8.h</file>
+            <file>$PROJ_DIR$\component\lists\generic_list.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_iocon.h</file>
+            <file>$PROJ_DIR$\component\uart\usart_adapter.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\component\lists\generic_list.h</file>
+            <file>$PROJ_DIR$\component\uart\uart.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_mailbox.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
+            <file>$PROJ_DIR$\device\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_power.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_flexcomm.c</file>
+            <file>$PROJ_DIR$\device\LPC55S69_cm33_core0.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_reset.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_reset.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_flexcomm.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_usart.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_power.h</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_manager.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_usart.h</file>
+            <file>$PROJ_DIR$\libs\iar_lib_power.a</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</file>
+            <file>$PROJ_DIR$\device\system_LPC55S69_cm33_core0.c</file>
+            <file>$PROJ_DIR$\device\system_LPC55S69_cm33_core0.h</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_manager.c</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_port_uart.h</file>
+            <file>$PROJ_DIR$\device\LPC55S69_cm33_core0_features.h</file>
+            <file>$PROJ_DIR$\mcmgr\mcmgr.c</file>
+            <file>$PROJ_DIR$\mcmgr\mcmgr.h</file>
+            <file>$PROJ_DIR$\mcmgr\mcmgr_internal_core_api.h</file>
+            <file>$PROJ_DIR$\mcmgr\mcmgr_internal_core_api_lpc55s69.c</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_env_bm.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\mcmgr_internal_core_api_lpc55s69.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_clock.pbi</file>
+            <file>$PROJ_DIR$\debug\smart_lock_cm33_core0.out</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_usart.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\generic_list.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\smart_lock_cm33_core0.pbd</file>
+            <file>$PROJ_DIR$\debug\obj\generic_list.o</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_platform.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_assert.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\mcmgr.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_gpio.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\system_LPC55S69_cm33_core0.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\serial_manager.o</file>
+            <file>$PROJ_DIR$\debug\obj\virtqueue.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\clock_config.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\main_master.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcomm.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_lite.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_reset.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\serial_port_uart.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_str.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\pin_mux.o</file>
+            <file>$PROJ_DIR$\debug\obj\board.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_reset.o</file>
+            <file>$PROJ_DIR$\debug\obj\rpmsg_ns.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_common.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\main_master.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\llist.pbi</file>
+            <file>$PROJ_DIR$\utilities\fsl_str.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_power.pbi</file>
+            <file>$PROJ_DIR$\source\MqttKit.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_lite.c</file>
+            <file>$PROJ_DIR$\rpmsg_lite\llist.c</file>
+            <file>$PROJ_DIR$\rpmsg_lite\virtqueue.c</file>
+            <file>$PROJ_DIR$\startup\startup_LPC55S69_cm33_core0.s</file>
+            <file>$PROJ_DIR$\rpmsg_lite\porting\rpmsg_platform.c</file>
+            <file>$PROJ_DIR$\rpmsg_lite\env\bm\rpmsg_env_bm.c</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_lite.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\virtio_ring.h</file>
+            <file>$PROJ_DIR$\source\MqttKit.c</file>
+            <file>$PROJ_DIR$\source\rpmsg_config.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_compiler.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\virtqueue.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_default_config.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_assert.c</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_ns.h</file>
+            <file>$PROJ_DIR$\source\main_master.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\env\bm\rpmsg_env.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\porting\rpmsg_platform.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\llist.h</file>
+            <file>$PROJ_DIR$\rpmsg_lite\rpmsg_ns.c</file>
+            <file>$PROJ_DIR$\source\Common.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console_conf.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_str.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\LPC55S69_cm33_core0_flash.icf</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\..\smart_lock_cm33_core1\debug\smart_lock_cm33_core1.bin</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\debug\list\smart_lock_cm33_core0.map</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\debug\smart_lock_cm33_core0_import_lib.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 22</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\board.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 6</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 65</file>
+                    <file> 91 156 158</file>
                 </tool>
             </outputs>
         </file>
@@ -121,219 +180,482 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 61</file>
+                    <file> 19</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 56</file>
+                    <file> 104</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 7 12 1 63 10 80 53 8 50 73 2 64 4 67 14 11 6 69 13 9 3 0 83 44 47 46 5 74 45</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\board\pin_mux.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 7</file>
+                    <file> 111</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 84</file>
+                    <file> 24</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 56 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 7 73 14 6 9 3 83 44 2 51 8 11 69 13 12 0 53 56 1 64 63 4 67 80 47 46 5 45</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14 10 7 4 13 9 73 8 1 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 138 75 82 49 50 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 7 80 8 10 9 11 69 12 45 64 82 50 138 13 14 6 67 73 49 4 1 2 63 3 0 83 44 47 53 46 5 75 72</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\component\lists\generic_list.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5</file>
+                    <file> 95</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 9</file>
+                    <file> 93</file>
                 </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\component\serial_manager\serial_manager.c</name>
-            <outputs>
+            <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 55</file>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 60</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 78</file>
+                    <file> 69 10 53 11 7 8 9 3 83 44 14 6 13 12 0 2 60 1 64 63 4 67 80 47 46 5 73 45</file>
                 </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 59</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 58</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\component\uart\usart_adapter.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 70</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 80</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\device\system_LPC55S69_cm33_core0.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 82</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_clock.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 60</file>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 44 8 3 46 14 9 83 11 69 7 5 74 6 13 12 0 47 1 63 2 64 4 67 80 53 73 45</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\uart\usart_adapter.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 18</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 76 70 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69 10 53 11 7 8 9 3 83 44 70 14 6 13 12 0 2 76 61 1 64 63 4 67 80 47 46 5 73 45</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_common.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 71</file>
+                    <file> 31</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 20</file>
+                    <file> 115</file>
                 </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_flexcomm.c</name>
-            <outputs>
+            <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 77</file>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 4</file>
+                    <file> 10 7 14 6 9 3 83 44 8 11 69 13 12 0 1 2 64 63 4 67 80 45 73 47 53 46 5</file>
                 </tool>
-            </outputs>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 64</file>
+                    <file> 29</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 28</file>
+                    <file> 99</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8 7 12 53 1 63 10 80 2 64 4 67 14 73 11 6 69 13 9 3 0 83 44 47 46 5 72 45</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_power.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 79</file>
+                    <file> 16</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 3</file>
+                    <file> 119</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 11 10 7 2 69 14 8 9 3 83 44 6 13 12 0 53 74 1 64 63 4 67 80 47 46 5 73 45</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_flexcomm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 0 12 69 11 13 5 8 7 46 14 6 10 9 3 83 44 47 1 70 2 64 63 4 67 80 53 73 45</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_reset.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 13</file>
+                    <file> 113</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 25</file>
+                    <file> 108</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 11 13 69 12 0 8 7 14 6 10 9 3 83 44 1 2 64 63 4 67 80 45 73 47 53 46 5</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\drivers\fsl_usart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 72</file>
+                    <file> 33</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 27</file>
+                    <file> 92</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 76 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 45 13 6 64 12 0 14 7 70 73 8 11 69 10 9 3 83 44 1 2 63 4 67 80 76 47 53 46 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 75 82 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69 10 11 7 61 8 9 3 83 44 53 14 6 13 12 0 2 75 82 1 64 63 4 67 80 47 46 5 73 45</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\device\system_LPC55S69_cm33_core0.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14 10 7 4 13 9 64 67 44 47 45 46 5 53 80 83</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 80 9 13 67 7 64 4 83 44 47 53 5 14 45 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\serial_manager\serial_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 75 82</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 7 2 12 14 64 10 80 8 75 1 63 4 67 45 11 6 69 13 9 3 0 83 44 73 47 53 46 5 82</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\mcmgr\mcmgr.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67</file>
+                    <file> 42</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 16</file>
+                    <file> 98</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 148 10 7 4 13 9 12 85 1 14 86</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 7 14 86 4 85 148 12 13 9 1</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\mcmgr\mcmgr_internal_core_api_lpc55s69.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 69</file>
+                    <file> 17</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 17</file>
+                    <file> 89</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 86 85 1 14 10 7 4 13 9 148 12 2 3 64 67 44 47 45 46 5 53 80 83 62 73 8 11 0 6 63 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 9 11 12 62 85 7 10 14 69 2 1 13 3 83 44 53 8 148 64 4 67 80 47 46 5 6 86 45 73 63 0</file>
+                </tool>
+            </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\rpmsg_lite\env\bm\rpmsg_env_bm.c</name>
+            <name>$PROJ_DIR$\debug\smart_lock_cm33_core0.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 156 158</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 147 154 112 19 41 40 31 30 15 29 16 113 35 33 95 77 32 105 42 17 28 111 23 20 37 39 102 38 34 22 26 25 153 155 159 157</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rpmsg_lite\rpmsg_lite.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 83</file>
+                    <file> 20</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 12</file>
+                    <file> 107</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127 6 10 7 4 13 9 12 132 14 128 141 139 148 133 130 140 131 146 5 149</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140 149 13 139 7 14 6 131 141 10 132 12 4 9 148 130 127 128 133 146 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rpmsg_lite\llist.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rpmsg_lite\virtqueue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 139 148 10 7 4 13 9 12 133 130 140 132 14 128 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128 133 10 13 12 9 130 132 148 140 7 4 14 141 139</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup\startup_LPC55S69_cm33_core0.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 34</file>
                 </tool>
             </outputs>
         </file>
@@ -342,139 +664,184 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 68</file>
+                    <file> 39</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 19</file>
+                    <file> 96</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8 10 7 4 13 9 148 12 2 3 140 139 133 130 64 67 44 14 47 45 46 5 53 80 83 62 73 1 11 0 6 63 69 85</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 148 7 8 139 4 67 1 2 62 140 80 10 14 11 69 64 85 13 9 12 3 133 130 83 44 45 46 5 6 47 53 73 63 0</file>
+                </tool>
+            </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\rpmsg_lite\llist.c</name>
+            <name>$PROJ_DIR$\rpmsg_lite\env\bm\rpmsg_env_bm.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 81</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
                     <file> 23</file>
                 </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\rpmsg_lite\rpmsg_lite.c</name>
-            <outputs>
+            <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 76</file>
+                    <file> 139 148 10 7 4 13 9 12 133 130 140 132 14 128 141 131 146 5 149 11 0 2 3</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 14</file>
+                    <file> 141 12 4 11 132 133 7 14 149 0 140 131 2 148 10 3 139 13 9 130 128 146 5</file>
                 </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\rpmsg_lite\rpmsg_ns.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 63</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 15</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\rpmsg_lite\virtqueue.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 66</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 26</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\main_master.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 57</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 24</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup\startup_LPC55S69_cm33_core0.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 74</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\utilities\fsl_assert.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 75</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 29</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\utilities\fsl_debug_console.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 21</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\utilities\fsl_str.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 73</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 10</file>
-                </tool>
-            </outputs>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\source\MqttKit.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 87</file>
+                    <file> 28</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 86</file>
+                    <file> 27</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 120 143 11 10 7 4 13 9 12 0 2 3</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 13 143 7 3 0 9 12 2 11 4 120</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 8 10 7 4 13 9 1 14 2 12 3 11 0 6 64 67 44 47 45 46 5 53 80 83 63 69 138 75 82</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10 14 7 46 6 9 3 83 44 5 8 11 69 13 12 0 47 1 138 2 64 63 4 67 80 53 73 45 75 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\main_master.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 116</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 148 10 7 4 13 9 12 11 0 2 3 127 6 132 14 128 141 139 133 130 140 131 146 5 149 49 50 73 8 1 64 67 44 47 45 46 53 80 83 63 69 72 138 75 82 85 51 76 143 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 7 148 63 51 0 132 14 149 73 1 49 12 141 67 82 2 85 120 4 10 3 140 72 64 80 5 11 127 138 76 143 13 9 6 139 131 128 133 130 146 50 69 8 83 44 45 47 53 46 75</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_debug_console.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 101</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 11 10 7 4 13 9 12 0 144 118 73 8 1 14 2 3 6 64 67 44 47 45 46 5 53 80 83 63 69 75 82 138</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 73 10 6 12 46 14 82 7 80 5 144 138 4 0 8 11 69 3 67 47 1 118 75 13 9 2 64 63 83 44 53 151 45</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rpmsg_lite\rpmsg_ns.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 114</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127 6 10 7 4 13 9 12 132 14 128 141 139 148 133 130 140 131 146 5 149 135</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 4 132 10 7 141 12 128 127 135 6 139 131 13 9 14 133 146 5 148 140 130 149</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_str.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 110</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 152 10 7 4 13 9 150 11 12 0 118 73 8 1 14 2 3 6 64 67 44 47 45 46 5 53 80 83 63 69 144</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 9 12 0 8 10 46 14 144 73 11 69 7 80 5 13 6 3 67 47 1 151 118 150 4 2 64 63 83 44 53 152 45</file>
+                </tool>
+            </inputs>
         </file>
     </configuration>
     <configuration>

@@ -909,7 +909,12 @@ int main(void)
             //setLock(1);
             msg.DATA = 1;
         }
-        rpmsg_lite_send(my_rpmsg, my_ept, REMOTE_EPT_ADDR, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);
+        //每0.5秒发送一次数据给core1
+        if(uiLoopCnt%50 == 0)
+        {
+            rpmsg_lite_send(my_rpmsg, my_ept, REMOTE_EPT_ADDR, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);  
+        }
+
         if(syncFlag==1) //如果需要同步
         {
           if(lockState==1)

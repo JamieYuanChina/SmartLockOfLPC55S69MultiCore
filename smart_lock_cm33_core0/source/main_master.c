@@ -910,7 +910,7 @@ int main(void)
             msg.DATA = 1;
         }
         //每0.5秒发送一次数据给core1
-        if(uiLoopCnt%50 == 0)
+        //if(uiLoopCnt%10 == 0)
         {
             rpmsg_lite_send(my_rpmsg, my_ept, REMOTE_EPT_ADDR, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);  
         }

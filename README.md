@@ -110,6 +110,7 @@ ESP-01S模块插入P20的一号管脚一端，即靠近P14一侧的8个孔位，
 使用Micro USB先插入开发板的P6，也就是Debuglink端口，给开发板供电。  
 1、LCD控制  
 可以通过点按LCD屏幕上的开关实现对于LED灯的亮灭进行控制。  
+![LCD](LCD_lock.gif)   
 2、web页面控制  
 web端登录https://open.iot.10086.cn/  
 输入用户名jamie_yuan  
@@ -122,3 +123,4 @@ web端登录https://open.iot.10086.cn/
 熄灭led灯，发送l或者L点亮LED灯。  
 5、调试串口控制  
 USB连接PC与开发板的P6，安装驱动后使用串口调试助手打开仿真器附带的串口设备，波特率115200，8位无校验，1位停止位。发送"CMDSL1\r\n"点亮LED灯，发送"CMDSL0\r\n"熄灭LED灯。注意\r\n为回车换行。  
+

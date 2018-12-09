@@ -116,7 +116,7 @@ ESP-01S模块插入P20的一号管脚一端，即靠近P14一侧的8个孔位，
 使用Micro USB先插入开发板的P6，也就是Debuglink端口，给开发板供电。  
 1、LCD控制  
 可以通过点按LCD屏幕上的开关实现对于实体锁芯的开锁和上锁控制，同时LED灯也可以表示锁的状态。  
-![LCD](LCD_LOCK.gif)   
+![LCD](LCD_TO_LOCK.gif)   
 2、web页面控制  
 web端登录https://open.iot.10086.cn/  
 输入用户名jamie_yuan  

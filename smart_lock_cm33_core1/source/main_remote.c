@@ -26,6 +26,12 @@
    
 #define APP_BOARD_RED_LED_PORT 1U
 #define APP_BOARD_RED_LED_PIN 6U
+#define APP_BOARD_YELLO_LINE_PIN 5U
+#define APP_BOARD_GREEN_LINE_PIN 8U
+
+#define APP_LOCK_STATE_LOCK  1U
+#define APP_LOCK_STATE_UNLOCK 2U
+
 
 typedef struct the_message
 {
@@ -36,6 +42,7 @@ typedef struct the_message
  * Prototypes
  ******************************************************************************/
 void delayms(uint32_t nms);
+void setLock(uint8_t state);
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -80,6 +87,27 @@ void delayms(uint32_t nms)
         __asm("NOP"); /* delay */
     }
 }
+void setLock(uint8_t state)
+{
+  if(state==APP_LOCK_STATE_LOCK)
+  {
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_YELLO_LINE_PIN, 0);
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_GREEN_LINE_PIN, 1);//Set lock
+    
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 0);//Set led
+  }else if(state==APP_LOCK_STATE_UNLOCK)
+  {
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_YELLO_LINE_PIN, 1);
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_GREEN_LINE_PIN, 0);//Set lock
+    
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 1);//Set led
+  }else{
+    return ;
+  }
+  delayms(240);//wait for lock
+  GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_YELLO_LINE_PIN, 0);
+  GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_GREEN_LINE_PIN, 0);
+}
 /*!
  * @brief Main function
  */
@@ -90,8 +118,14 @@ int main(void)
     struct rpmsg_lite_endpoint *my_ept;
     struct rpmsg_lite_instance rpmsg_ctxt;
     struct rpmsg_lite_instance *my_rpmsg;
-    
+    int iLastLockState=0;
     gpio_pin_config_t red_led_config = {
+        kGPIO_DigitalOutput, 0,
+    };
+    gpio_pin_config_t yello_line_config = {
+        kGPIO_DigitalOutput, 0,
+    };
+    gpio_pin_config_t gree_line_config = {
         kGPIO_DigitalOutput, 0,
     };
     
@@ -103,7 +137,13 @@ int main(void)
     
     GPIO_PortInit(GPIO, APP_BOARD_RED_LED_PORT);
     GPIO_PinInit(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, &red_led_config);
+    GPIO_PinInit(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_YELLO_LINE_PIN, &yello_line_config);
+    GPIO_PinInit(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_GREEN_LINE_PIN, &gree_line_config);
+    
     GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 1);
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_YELLO_LINE_PIN, 0);
+    GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_GREEN_LINE_PIN, 0);
+    
     GPIO_PortMaskedSet(GPIO, APP_BOARD_RED_LED_PORT, 0x0000FFFF);
     GPIO_PortMaskedWrite(GPIO, APP_BOARD_RED_LED_PORT, 0xFFFFFFFF);
     
@@ -146,28 +186,40 @@ int main(void)
 
     while (1)//(msg.DATA <= 100)
     {
-       if (has_received)       // if recevied a message from core 0
+        if (has_received)       // if recevied a message from core 0
         {
             has_received = 0;  // clear recevied flag
-            if(msg.DATA==1)    // if the message is 1,then turn off the led 
+            
+            if(msg.DATA != iLastLockState) // if lock state is change
             {
-                  GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 1);
+                if(msg.DATA==1)    // if the message is 1,then turn off the led 
+                {
+                    setLock(APP_LOCK_STATE_UNLOCK);
+                }
+                else if(msg.DATA==2) // if the message is 2,then turn on the led 
+                {
+                    setLock(APP_LOCK_STATE_LOCK);
+   
+                }else if(msg.DATA==254)  // if the message is 254,then break this "while" to next "while" 
+                {
+                    break;                 // It's just used to test whether the communication between the two cores is normal.
+                }else 
+                {
+                    continue;  
+                }
+              
+                iLastLockState = msg.DATA;//update State
+              
+            }else// if not change ,nothing to do 
+            {
+              
             }
-            else if(msg.DATA==2) // if the message is 2,then turn on the led 
-            {
-                  GPIO_PinWrite(GPIO, APP_BOARD_RED_LED_PORT, APP_BOARD_RED_LED_PIN, 0);
-            }else if(msg.DATA==254)  // if the message is 254,then break this "while" to next "while" 
-            {
-              break;                 // It's just used to test whether the communication between the two cores is normal.
-            }else 
-            {
-              continue;  
-            }
+ 
             //msg.DATA++;
             rpmsg_lite_send(my_rpmsg, my_ept, remote_addr, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);
-        }
+        }//end received
        delayms(10);
-    }
+    }//end wihle
 
     rpmsg_lite_destroy_ept(my_rpmsg, my_ept);
     my_ept = NULL;

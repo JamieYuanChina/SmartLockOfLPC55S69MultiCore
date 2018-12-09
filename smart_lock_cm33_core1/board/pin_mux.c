@@ -58,6 +58,18 @@ BOARD_InitPins_Core1:
 /* Function assigned for the Cortex-M33 (Core #0) */
 void BOARD_InitPins_Core1(void)
 {
+  /*
+  LED
+  port1 pin4      D8(LED RGB),LEDR
+  port1 pin6      D8(LED RGB),LEDB
+  port1 pin7      D8(LED RGB),LEDG
+
+  GPIO
+  port1 pin5      P17,PIO1_5_GPIO_ARD
+  port1 pin8      P17,PIO1_8_GPIO_ARD
+  port0 pin15     P18,PIO0_15_GPIO_ARD
+  port0 pin18     P18,PIO0_18_GPIO_ARD
+  */
      //LED*3
     const uint32_t port1_pin4_config = (/* Pin is configured as PIO1_4 */
                                         IOCON_PIO_FUNC0 |
@@ -103,7 +115,68 @@ void BOARD_InitPins_Core1(void)
                                         IOCON_PIO_OPENDRAIN_DI);
     /* PORT1 PIN7 (coords: 9) is configured as PIO1_7 */
     IOCON_PinMuxSet(IOCON, 1U, 7U, port1_pin7_config);
-
+    
+    //GPIO*4
+    const uint32_t port1_pin5_config = (/* Pin is configured as PIO1_5 */
+                                        IOCON_PIO_FUNC0 |
+                                        /* No addition pin function */
+                                        IOCON_PIO_MODE_INACT |
+                                        /* Standard mode, output slew rate control is enabled */
+                                        IOCON_PIO_SLEW_STANDARD |
+                                        /* Input function is not inverted */
+                                        IOCON_PIO_INV_DI |
+                                        /* Enables digital function */
+                                        IOCON_PIO_DIGITAL_EN |
+                                        /* Open drain is disabled */
+                                        IOCON_PIO_OPENDRAIN_DI);
+    /* PORT1 PIN5 (coords: 1) is configured as PIO1_5 */
+    IOCON_PinMuxSet(IOCON, 1U, 5U, port1_pin5_config);
+    
+    const uint32_t port1_pin8_config = (/* Pin is configured as PIO1_8 */
+                                        IOCON_PIO_FUNC0 |
+                                        /* No addition pin function */
+                                        IOCON_PIO_MODE_INACT |
+                                        /* Standard mode, output slew rate control is enabled */
+                                        IOCON_PIO_SLEW_STANDARD |
+                                        /* Input function is not inverted */
+                                        IOCON_PIO_INV_DI |
+                                        /* Enables digital function */
+                                        IOCON_PIO_DIGITAL_EN |
+                                        /* Open drain is disabled */
+                                        IOCON_PIO_OPENDRAIN_DI);
+    /* PORT1 PIN8 (coords: 1) is configured as PIO1_8 */
+    IOCON_PinMuxSet(IOCON, 1U, 8U, port1_pin8_config);
+    
+    const uint32_t port0_pin15_config = (/* Pin is configured as PIO0_15 */
+                                        IOCON_PIO_FUNC0 |
+                                        /* No addition pin function */
+                                        IOCON_PIO_MODE_INACT |
+                                        /* Standard mode, output slew rate control is enabled */
+                                        IOCON_PIO_SLEW_STANDARD |
+                                        /* Input function is not inverted */
+                                        IOCON_PIO_INV_DI |
+                                        /* Enables digital function */
+                                        IOCON_PIO_DIGITAL_EN |
+                                        /* Open drain is disabled */
+                                        IOCON_PIO_OPENDRAIN_DI);
+    /* PORT0 PIN15 (coords: 1) is configured as PIO0_15 */
+    IOCON_PinMuxSet(IOCON, 0U, 15U, port0_pin15_config);
+    
+    const uint32_t port0_pin18_config = (/* Pin is configured as PIO0_18 */
+                                        IOCON_PIO_FUNC0 |
+                                        /* No addition pin function */
+                                        IOCON_PIO_MODE_INACT |
+                                        /* Standard mode, output slew rate control is enabled */
+                                        IOCON_PIO_SLEW_STANDARD |
+                                        /* Input function is not inverted */
+                                        IOCON_PIO_INV_DI |
+                                        /* Enables digital function */
+                                        IOCON_PIO_DIGITAL_EN |
+                                        /* Open drain is disabled */
+                                        IOCON_PIO_OPENDRAIN_DI);
+    /* PORT0 PIN18 (coords: 1) is configured as PIO0_18 */
+    IOCON_PinMuxSet(IOCON, 0U, 18U, port0_pin18_config);
+   
 }
 /***********************************************************************************************************************
  * EOF

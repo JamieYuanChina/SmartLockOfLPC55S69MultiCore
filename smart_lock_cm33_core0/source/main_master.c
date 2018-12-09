@@ -160,8 +160,8 @@ static int my_ept_read_cb(void *payload, int payload_len, unsigned long src, voi
         memcpy((void *)&msg, payload, payload_len);
         *has_received = 1;
     }
-    PRINTF("Primary core received a msg\r\n");
-    PRINTF("Message: Size=%x, DATA = %i\r\n", payload_len, msg.DATA);
+    //PRINTF("Primary core received a msg\r\n");
+    //PRINTF("Message: Size=%x, DATA = %i\r\n", payload_len, msg.DATA);
     return RL_RELEASE;
 }
 
@@ -776,7 +776,7 @@ int main(void)
     msg.DATA = 1;
     rpmsg_lite_send(my_rpmsg, my_ept, REMOTE_EPT_ADDR, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);
     
-   connectWifi();  //WIFI连接OneNET云服务器
+   //connectWifi();  //WIFI连接OneNET云服务器
     
    while (1)//(msg.DATA <= 100)
     {

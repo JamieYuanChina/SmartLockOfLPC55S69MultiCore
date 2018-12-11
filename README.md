@@ -110,10 +110,10 @@ ESP-01S的WiFi模块插入P20的一号管脚一端，即靠近P14一侧的8个�
 4、电子锁模驱动模块  
 锁驱动的黄线连接P17的17号管脚，即PIO1_5。  
 锁驱动的绿线连接P17的19号管脚，即PIO1_8。  
-![WiFi](LOCK_DRV.jpg)   
+![Lock](LOCK_DRV.jpg)   
 锁驱动的红线即电源连接到P24的+5V电源引脚。  
 锁驱动的黑线即GND连接到P24的GND引脚。  
-![WiFi](LOCK_PWR.jpg)   
+![Lock](LOCK_PWR.jpg)   
 
 软件配置
 ================

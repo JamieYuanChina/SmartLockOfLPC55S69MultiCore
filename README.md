@@ -30,9 +30,13 @@ P18
 　FC2_RX|　15　|　16　|　　　　  
 　　　　|　17　|　18　|　　　　  
 　　　　|　19　|　20　|　　　　  
-  
-  
-串口屏协议：  
+    
+FC7接LCD屏幕  
+FC2接蓝牙模块HC08  
+FC1接WiFi模块ESP-01S  
+PIO1_5和PIO1_6接锁驱动板  
+
+串口LCD屏协议：  
 ================  
 电源5V，通讯3.3V  
 串口屏协议，发送ASCII码，内容"p0.pic=1"(关闭)或者"p0.pic=2"(打开)来控制界面显示开关状态，  
@@ -48,14 +52,13 @@ P18
   
 WIFI串口协议  
 ================  
-模块使用ESP-01S，电源3.3V，串口通讯，波特率115200.  
+WiFi模块使用ESP-01S，电源3.3V，串口通讯，波特率115200.  
 共有四部分需要处理  
 建立连接和接入鉴权等  
 中断接收需要处理  
 定时发送状态  
 状态改变及时同步    
-
-  
+    
 主循环逻辑  
 ================  
 检查调试串口是否收到数据，如果有进行处理  
@@ -70,13 +73,17 @@ WIFI串口协议
 如果需要同步，则同步信息到LCD，WIFI，Debug串口等等  
 延时10ms  
   
-文件修改列表   
+文件功能列表   
 ================  
-1、board/pin_mux.h和pin_mux.h，主要是用来定义IO的功能，这里使用到了LED灯和四个串口  
-2、doc/readme.txt，主要用来说明本工程的一些信息。  
-3、Source/Common.h，主要是定义用到的一些数据类型  
-4、Source/MqttKit.h和MqttKit.c，这两个是连接到OneNET云服务器的协议解析文件，移植自OneNET官方程序  
-5、Source/main_master.c本工程的主要文件，实现了蓝牙连接，调试串口连接，wifi连接到云服务器。  
+Core0:  
+1、smart_lock_cm33_core0/board/pin_mux.h和pin_mux.h，主要是用来定义IO的功能，这里使用到了四个串口  
+2、smart_lock_cm33_core0/doc/readme.txt，主要用来说明本工程的一些信息。  
+3、smart_lock_cm33_core0/Source/Common.h，主要是定义用到的一些数据类型  
+4、smart_lock_cm33_core0/Source/MqttKit.h和MqttKit.c，这两个是连接到OneNET云服务器的协议解析文件，移植自OneNET官方程序  
+5、smart_lock_cm33_core0/Source/main_master.c本工程的主要文件，实现了蓝牙连接，调试串口连接，wifi连接到云服务器。  
+Core1  
+1、smart_lock_cm33_core1/board/pin_mux.h和pin_mux.c，主要是用来定义IO的功能，这里使用到了LED灯和锁驱动控制引脚PIO1_5和PIO1_8  
+2、smart_lock_cm33_core1/source/main_remote.c，主要实现了Core1内核的代码裸机，接收Core0消息来控制LED灯和外接的电子锁。  
   
 实现的主要功能  
 ================  
@@ -95,7 +102,7 @@ WIFI串口协议
 HC-08的蓝牙模块的TXD和RXD引脚分别插入P24的RX和TX引脚，即3和4引脚。  
 ![BT](BT_RX_TX.jpg)  
 HC-08的电源连接到P23的+3.3V引脚，地线连接到GND引脚，实现共地。  
-ESP-01S模块插入P20的一号管脚一端，即靠近P14一侧的8个孔位，天线向上。 
+ESP-01S的WiFi模块插入P20的一号管脚一端，即靠近P14一侧的8个孔位，天线向上。 
 ![WiFi](WIFI.jpg)   
 锁驱动的黄线连接P17的17号管脚，即PIO1_5。  
 锁驱动的绿线连接P17的19号管脚，即PIO1_8。  

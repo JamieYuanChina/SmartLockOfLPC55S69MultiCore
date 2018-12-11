@@ -79,11 +79,11 @@ Core0:
 1、smart_lock_cm33_core0/board/pin_mux.h和pin_mux.h，主要是用来定义IO的功能，这里使用到了四个串口  
 2、smart_lock_cm33_core0/doc/readme.txt，主要用来说明本工程的一些信息。  
 3、smart_lock_cm33_core0/Source/Common.h，主要是定义用到的一些数据类型  
-4、smart_lock_cm33_core0/Source/MqttKit.h和MqttKit.c，这两个是连接到OneNET云服务器的协议解析文件，移植自OneNET官方程序  
-5、smart_lock_cm33_core0/Source/main_master.c本工程的主要文件，实现了蓝牙连接，调试串口连接，wifi连接到云服务器。  
+4、smart_lock_cm33_core0/Source/MqttKit.h和MqttKit.c，是连接到OneNET云服务器的协议解析文件，移植自官方程序  
+5、smart_lock_cm33_core0/Source/main_master.c本工程的主要文件，实现了蓝牙、调试串口连接，wifi连接到云服务器  
 Core1  
-1、smart_lock_cm33_core1/board/pin_mux.h和pin_mux.c，主要是用来定义IO的功能，这里使用到了LED灯和锁驱动控制引脚PIO1_5和PIO1_8  
-2、smart_lock_cm33_core1/source/main_remote.c，主要实现了Core1内核的代码裸机，接收Core0消息来控制LED灯和外接的电子锁。  
+1、smart_lock_cm33_core1/board/pin_mux.h和pin_mux.c，主要是用来定义IO的功能，包括LED灯和锁驱动控制引脚  
+2、smart_lock_cm33_core1/source/main_remote.c，主要实现了Core1内核的代码，接收Core0消息并控制LED灯和电子锁。  
   
 实现的主要功能  
 ================  

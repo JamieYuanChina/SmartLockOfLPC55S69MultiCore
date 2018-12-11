@@ -370,7 +370,7 @@ unsigned char OneNet_FillBuf(char *buf)
     strcpy(buf, "{");
 
     memset(text, 0, sizeof(text));
-    sprintf(text, "\"Red_Led\":%d,", lockState);
+    sprintf(text, "\"Red_Led\":%d", lockState);
     strcat(buf, text);
 
     strcat(buf, "}");
@@ -776,7 +776,7 @@ int main(void)
     msg.DATA = 1;
     rpmsg_lite_send(my_rpmsg, my_ept, REMOTE_EPT_ADDR, (char *)&msg, sizeof(THE_MESSAGE), RL_DONT_BLOCK);
     
-   //connectWifi();  //WIFI连接OneNET云服务器
+   connectWifi();  //WIFI连接OneNET云服务器
     
    while (1)//(msg.DATA <= 100)
     {

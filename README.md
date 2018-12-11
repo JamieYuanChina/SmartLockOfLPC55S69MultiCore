@@ -81,7 +81,7 @@ Core0:
 3、smart_lock_cm33_core0/Source/Common.h，主要是定义用到的一些数据类型  
 4、smart_lock_cm33_core0/Source/MqttKit.h和MqttKit.c，是连接到OneNET云服务器的协议解析文件，移植自官方程序  
 5、smart_lock_cm33_core0/Source/main_master.c本工程的主要文件，实现了蓝牙、调试串口连接，wifi连接到云服务器  
-Core1  
+Core1:  
 1、smart_lock_cm33_core1/board/pin_mux.h和pin_mux.c，主要是用来定义IO的功能，包括LED灯和锁驱动控制引脚  
 2、smart_lock_cm33_core1/source/main_remote.c，主要实现了Core1内核的代码，接收Core0消息并控制LED灯和电子锁。  
   

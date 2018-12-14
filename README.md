@@ -97,23 +97,23 @@ Core1:
 ==================
 1、串口LCD屏  
 串口LCD屏幕的发送和接收分别连接P17的10号和12号管脚。  
-![LCD](LCD_RX_TX.jpg)  
+![LCD](JPG/LCD_RX_TX.jpg)  
 串口LCD屏幕的电源连接P16个20号管脚，即Vin，此处为5V电源。  
 串口LCD屏幕的地线连接P8的GND管脚，实现共地。  
 2、蓝牙模块  
 HC-08的蓝牙模块的TXD和RXD引脚分别插入P24的RX和TX引脚，即3和4引脚。  
-![BT](BT_RX_TX.jpg)   
+![BT](JPG/BT_RX_TX.jpg)   
 HC-08的电源连接到P23的+3.3V引脚，地线连接到GND引脚，实现共地。  
 3、WiFi模块  
 ESP-01S的WiFi模块插入P20的一号管脚一端，即靠近P14一侧的8个孔位，天线向上。 
-![WiFi](WIFI.jpg)   
+![WiFi](JPG/WIFI.jpg)   
 4、电子锁模驱动模块  
 锁驱动的黄线连接P17的17号管脚，即PIO1_5。  
 锁驱动的绿线连接P17的19号管脚，即PIO1_8。  
-![Lock](LOCK_DRV.jpg)   
+![Lock](JPG/LOCK_DRV.jpg)   
 锁驱动的红线即电源连接到P24的+5V电源引脚。  
 锁驱动的黑线即GND连接到P24的GND引脚。  
-![Lock](LOCK_PWR.jpg)   
+![Lock](JPG/LOCK_PWR.jpg)   
 
 软件配置
 ================
@@ -127,14 +127,14 @@ ESP-01S的WiFi模块插入P20的一号管脚一端，即靠近P14一侧的8个�
 使用Micro USB先插入开发板的P6，也就是Debuglink端口，给开发板供电。  
 1、LCD控制  
 可以通过点按LCD屏幕上的开关实现对于实体锁芯的开锁和上锁控制，同时LED灯也可以表示锁的状态。  
-![LCD](LCD_TO_LOCK.gif)   
+![LCD](GIF/LCD_TO_LOCK.gif)   
 2、蓝牙控制  
 在android手机中安装HC-COM的app，启动后点击扫描设备，点击扫描到的HC-08，连接成功后发送u或者U
 熄灭led灯，发送l或者L点亮LED灯。  
-![BT](BT_LOCK.gif)   
+![BT](GIF/BT_LOCK.gif)   
 3、手机APP控制   
 在android手机的app"设备云"中登录系统，点击应用，智能门锁，门锁开关页面就可以控制门锁的开关了。  
-![WIFI](WIFI_LOCK.gif)   
+![WIFI](GIF/WIFI_LOCK.gif)   
 4、云端控制   
 web端登录https://open.iot.10086.cn/  
 登录后，点击开发者中心，蓝牙语音智能门锁，应用管理，智能门锁，在门锁控制页面就可以控制门锁的开合关了。 

@@ -129,11 +129,13 @@ ESP-01S的WiFi模块插入P20的一号管脚一端，即靠近P14一侧的8个�
 可以通过点按LCD屏幕上的开关实现对于实体锁芯的开锁和上锁控制，同时LED灯也可以表示锁的状态。  
 ![LCD](GIF/LCD_TO_LOCK.gif)   
 2、蓝牙控制  
-在android手机中安装HC-COM的app，启动后点击扫描设备，点击扫描到的HC-08，连接成功后发送u或者U
+在android手机中安装HC-COM的app，或者再iOS的应用商店中搜索lightblue并安装，启动后点击扫描设备，点击扫描到的HC-08，连接成功后发送u或者U
 熄灭led灯，发送l或者L点亮LED灯。  
 ![BT](GIF/BT_LOCK.gif)   
 3、手机APP控制   
 在android手机的app"设备云"中登录系统，点击应用，智能门锁，门锁开关页面就可以控制门锁的开关了。  
+设备云APP下载，支持Android和iOS   
+https://open.iot.10086.cn/doc/art656.html#118   
 ![WIFI](GIF/WIFI_LOCK.gif)   
 4、云端控制   
 web端登录https://open.iot.10086.cn/  
